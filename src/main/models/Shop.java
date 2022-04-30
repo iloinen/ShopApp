@@ -12,6 +12,29 @@ public class Shop {
         fillProducts(productNumber);
     }
 
+    public Product findProduct(String productName) {
+        Class searchForClass = findClassByName(productName);
+
+        for (Product product : products) {
+            if (product.getClass().equals(searchForClass)) {
+                return product;
+            }
+        }
+
+        return null;
+    }
+
+    private Class findClassByName(String className) {
+        return switch (className) {
+            case "kenyér" -> Bread.class;
+            case "cseresznye" -> Cherry.class;
+            case "tej" -> Milk.class;
+            case "rum" -> Rum.class;
+            case "cukor" -> Sugar.class;
+            default -> null;
+        };
+    }
+
     public void open() {
         isOpen = true;
     }

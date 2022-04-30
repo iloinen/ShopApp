@@ -5,15 +5,32 @@ import main.models.foods.*;
 
 public class Main {
 
+    // valami édes ^^
+
     public static void main(String[] args) {
-        Product[] products = {
+        Product[] productsFromShop = {
                 null,
                 new Sugar(),
                 new Milk(),
                 new Product()
         };
 
-        Class breadClass = Bread.class;                     // Bread maga az osztály
+        // 1. lehetőség
+        Class[] buyerWishList1 = {};
+
+        // 2. lehetőség
+        Product[] buyerWishList2 = {};
+
+        // 3. lehetőség
+        String[] buyerWishList3 = {"kenyér", "rum", "tej"};
+
+        String buyerWish = "kenyér";
+
+
+
+
+
+        /*Class breadClass = Bread.class;                     // Bread maga az osztály
 
         for (Product product : products) {
             if (product instanceof Bread) {
@@ -36,7 +53,7 @@ public class Main {
             } else {
                 System.out.println("ez egy null");
             }
-        }
+        }*/
 
         /*Customer buyer = new Customer("Név");
 

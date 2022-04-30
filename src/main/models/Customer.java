@@ -1,6 +1,5 @@
 package main.models;
 
-import main.models.foods.Drink;
 import main.models.foods.Milk;
 import main.models.foods.Product;
 
