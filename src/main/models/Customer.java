@@ -24,18 +24,20 @@ public class Customer {
         this.cart = new Product[cartSize];
     }
 
-    public void buyMilk(Product[] products) {
-        Milk milk = findMilk(products);
+    public void buyMilk(Product[] products, double maxFatPercent) {
+        Milk milk = findMilk(products, maxFatPercent);
 
         if (milk != null) {
             boolean buy = couldPutIntoCart(milk);
         }
     }
 
-    public Milk findMilk(Product[] products) {
+    public Milk findMilk(Product[] products, double maxFatPercent) {
         for (Product product : products) {
-            if (product instanceof Milk) {
-                return (Milk) product;
+            // itt még nem tudom, hogy ez Milk-e
+            if (product instanceof Milk productMilk
+                    && productMilk.getFat() < maxFatPercent) {
+                return productMilk;
             }
         }
 
