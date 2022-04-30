@@ -8,7 +8,9 @@ public class Shop {
     private boolean isOpen;
     private int income;
 
-    public Shop() {}
+    public Shop(int productNumber) {
+        fillProducts(productNumber);
+    }
 
     public void open() {
         isOpen = true;
@@ -43,7 +45,8 @@ public class Shop {
 
         if (bill <= customer.getMoney()) {
             customer.payTheBill(bill);
-            addToIncome(bill);
+            //addToIncome(bill);
+            setIncome(income + bill);
             System.out.println("Customer successfully paid for the products.");
         } else {
             System.out.println("Customer does not have enough money to pay! Sorry.");
@@ -74,6 +77,10 @@ public class Shop {
 
     public int getIncome() {
         return income;
+    }
+
+    public void setIncome(int income) {
+        this.income = income;
     }
 
 }

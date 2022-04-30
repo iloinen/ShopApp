@@ -9,7 +9,6 @@ public class Product {
     protected double quantity = 5.0;
     protected String unitType = "unknown";
     protected boolean isLongLife;
-
     protected int price = 1;
 
     public Product() {

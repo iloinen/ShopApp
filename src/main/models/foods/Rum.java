@@ -2,6 +2,7 @@ package main.models.foods;
 
 public class Rum extends Drink {
 
+    // alcohol by volume
     private int abv;
 
     public Rum() {
