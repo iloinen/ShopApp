@@ -1,6 +1,7 @@
 package main;
 
 import main.models.Customer;
+import main.models.UnitType;
 import main.models.foods.*;
 
 public class Main {
@@ -8,7 +9,10 @@ public class Main {
     // valami édes ^^
 
     public static void main(String[] args) {
-        Product[] productsFromShop = {
+        Product tokMindegyMi = new Product(1.0, UnitType.PIECE, 1000);
+
+
+        /*Product[] productsFromShop = {
                 null,
                 new Sugar(),
                 new Milk(),
@@ -24,11 +28,7 @@ public class Main {
         // 3. lehetőség
         String[] buyerWishList3 = {"kenyér", "rum", "tej"};
 
-        String buyerWish = "kenyér";
-
-
-
-
+        String buyerWish = "kenyér";*/
 
         /*Class breadClass = Bread.class;                     // Bread maga az osztály
 
