@@ -1,8 +1,9 @@
 package main.models.foods;
 
+import main.models.Consumable;
 import main.models.UnitType;
 
-public class Food extends Product {
+public class Food extends Product implements Consumable {
 
     public Food(double quantity, UnitType unitType, int price) {
         this.quantity = quantity;

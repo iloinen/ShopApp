@@ -5,6 +5,10 @@ import main.models.foods.*;
 public class Shop {
 
     private Product[] products;
+
+    private Consumable[] foodsAndDrinks;
+    private Wearable[] clothes;
+
     private boolean isOpen;
     private int income;
 
